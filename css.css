@@ -1,0 +1,81 @@
+:root{
+    --c1:#eeeeee;
+    --c2:#222222;
+    --c3:#ee0000;
+    --c4:#0e0;
+    --c5:#05e;
+    color: white;
+    --Centro: calc(100vw - attr(width) / 2);
+}
+html,body{
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+main{
+    min-height: inherit;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+.FullWidth{width: 100%}
+.FullHeight{min-height: 100vh}
+.Flex{display: flex;}
+.Wrap{flex-wrap: wrap;}
+.Centro, .CentroY{align-items: center;}
+.Centro, .CentroX{justify-content: center;}
+.Col{flex-direction: column;}
+.JCSA{justify-content: space-around;}
+.JCSB{justify-content: space-between;}
+[class*="col-"] {
+    margin: 0 auto;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.Paleta{
+    width: 20em;
+    aspect-ratio:1;
+    background-color: var(--c1);
+    border-radius: 50%;
+}
+.Paleta .Fundo{
+    aspect-ratio:1;
+    background-color: var(--c2);
+    border-radius: 50%;
+}
+.Fundo{
+    width: 95%;
+    height: 95%;
+}
+.Cima,.Baixo{
+    width: 95%;
+    height: 95%;
+}
+.CDireita, .CEsquerda{
+    width: 8em;
+    aspect-ratio:1;
+}
+.CEsquerda{
+    border-top-left-radius: 100%;
+    background-color: var(--c3);
+}
+.CDireita{
+    border-top-right-radius: 100%;
+    background-color: var(--c4);
+}
+.BEsquerda,.BDireita{
+    width: 47%;
+    aspect-ratio:1;
+    background-color: var(--c5);
+}
+.BEsquerda{
+    border-bottom-left-radius: 100%;
+}
+.BDireita{
+    border-bottom-right-radius: 100%;
+}
