@@ -1,9 +1,9 @@
 :root{
-    --c1:#eeeeee;
-    --c2:#222222;
-    --c3:#ee0000;
-    --c4:#0e0;
-    --c5:#05e;
+    --c1:rgba(96, 96, 26, 0.6);
+    --c2:rgba(25, 69, 247, 0.04);
+    --c3:rgba(177, 224, 160, 0.95);
+    --c4:rgba(221, 247, 240, 0.56);
+    --c5:rgba(230, 252, 92, 0.28);
     color: white;
     --Centro: calc(100vw - attr(width) / 2);
 }
@@ -37,8 +37,12 @@ main{
   clear: both;
   display: table;
 }
+section{
+
+}
 .Paleta{
-    width: 20em;
+    border: .1em solid white;
+    width: 30em;
     aspect-ratio:1;
     background-color: var(--c1);
     border-radius: 50%;
@@ -51,13 +55,14 @@ main{
 .Fundo{
     width: 95%;
     height: 95%;
+    padding: .3em;
 }
 .Cima,.Baixo{
-    width: 95%;
+    width: 100%;
     height: 95%;
 }
 .CDireita, .CEsquerda{
-    width: 8em;
+    width: 45%;
     aspect-ratio:1;
 }
 .CEsquerda{
@@ -68,14 +73,14 @@ main{
     border-top-right-radius: 100%;
     background-color: var(--c4);
 }
-.BEsquerda,.BDireita{
+.CBaixo{
     width: 47%;
     aspect-ratio:1;
     background-color: var(--c5);
 }
-.BEsquerda{
+.CBEsquerda{
     border-bottom-left-radius: 100%;
 }
-.BDireita{
+.CBDireita{
     border-bottom-right-radius: 100%;
 }

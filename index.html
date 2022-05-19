@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Paleta de cor</title>
-        <link rel="stylesheet" href="css.css">
-    </head>
-    <body>
-        <div class="Flex FullWidth FullHeight Centro">
-
-            <div class="Paleta Flex Centro" p='1'>
-                <div class="Fundo Flex Col Centro ">
-                    <div class="Cima Flex JCSA Centro">
-                        <div class="CEsquerda">
-
-                        </div>
-                        <div class="CDireita">
-
-                        </div>
-                    </div>
-                    <div class="Baixo Flex Centro">
-                        <div class="BEsquerda">
-
-                        </div>
-                        <div class="BDireita">
-
-                        </div>
-                    </div>
+<head>
+    <meta charset="utf-8">
+    <title>Paleta de cor</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button id="paleta">{{mudar}}</button>
+        <button id="salvar">{{salvar}}</button>
+    </div>
+    <script>
+    const { createApp } = Vue
+    createApp({
+        data() {
+            return {
+                mudar:"Gerar nova paleta",
+                salvar: "Extrair paleta para variaveis CSS"
+            }
+        }
+    }).mount('#app')
+    </script>
+    <section class="Flex FullWidth Centro">
+        <div class="Paleta Flex Centro">
+            <div class="Fundo Flex Col Centro ">
+                <div class="Cima Flex JCSA Centro">
+                    <div class="CEsquerda"></div><div class="CDireita"></div>
+                </div>
+                <div class="Baixo Flex Centro">
+                    <div class="CBaixo CBEsquerda"></div><div class="CBaixo CBDireita"></div>
                 </div>
             </div>
-
         </div>
-    </body>
+    </section>
+    <span id="saida"></span>
+</body>
 </html>
